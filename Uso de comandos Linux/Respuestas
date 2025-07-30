@@ -1,0 +1,37 @@
+Uso de comandos Linux
+
+1. Muestra los archivos del directorio /bin
+ls ../../bin
+
+2. Asumiendo que te encuentras en el directorio del usuario con el que te conectas, muestra un listado del contenido de /usr/bin con una sola línea de comando
+ls ../../tmp
+
+3. Muestra todos los archivos del directorio /etc ordenados por tamaño (de mayor a menor) junto con el resto de características, es decir, permisos, tamaño, fechas de la última modificación, etc..
+ ls -Sl ../../etc
+
+4. Muestra las 10 últimas líneas del fichero /etc/bash.bashrc
+tail ../../etc/bash.bashrc
+
+5. Crea el directorio “examen” dentro del directorio del usuario y crea un fichero vacío dentro del directorio “examen”, con nombre “texto.txt”
+mkdir examen
+cd examen
+touch texto.txt
+
+6. Utiliza un editor para abrir el fichero “texto.txt” e introduce los estilos de música que más te gusten. Guarda los cambios y sal.
+vim texto.txt
+Tecla Insert
+clasica, contemporanea
+Tecla Escape
+:wq!
+
+7. Crea dentro del directorio “examen” el directorio “copia”, y copia el fichero “texto.txt” a este directorio.
+cp ejemplo.txt /home/ubuntu/ejemplo.txt
+
+8. Otorgar todos los permisos para el propio usuario y los de su grupo y solo de lectura y escritura al resto de usuarios al fichero “texto.txt”.
+chmod 776 texto.txt
+
+9. Crear un grupo de usuarios llamado “grupoexamen”
+sudo groupadd grupoexamen
+
+10. Crear un usuario “candidato” que pertenezca al “grupoexamen”, la password del usuario también será “candidato”.
+sudo adduser -m candidato groupadd grupoexamen
